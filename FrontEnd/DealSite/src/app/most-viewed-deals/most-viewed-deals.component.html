@@ -1,0 +1,30 @@
+
+    <div *ngIf="mostViewedProducts?.length!=0" class="container">
+  
+        <table style="table-layout: auto " >
+          <tr>
+            <th>Product Name</th>
+            <th>Company</th>
+            <th>Price</th>
+            <th>Discount</th>
+            <th>Deal Start Date</th>
+            <th>Deal End Date</th>
+            
+          </tr>
+          <tr *ngFor="let mostViewedProduct of mostViewedProducts">
+            <td>{{mostViewedProduct.name | uppercase}}</td>
+            <td>{{mostViewedProduct.advertiser.name | uppercase}}</td>
+            <td>{{mostViewedProduct.price | currency: mostViewedProduct.currency }}</td>
+            <td>{{mostViewedProduct.discount}}%</td>
+            <td>{{mostViewedProduct.startDate | date}}</td>
+            <td>{{mostViewedProduct.endDate | date}}</td>
+            <button (click)="sendProductToDetailView(mostViewedProduct)"> >View Deal</button>
+
+          </tr>
+      
+        </table>
+        
+      </div>
+      <app-product-detail class="container"></app-product-detail>
+
+

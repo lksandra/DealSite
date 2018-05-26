@@ -1,0 +1,28 @@
+<!-- <p>
+  this is product-detail component
+</p> -->
+<div *ngIf="product!=null" class ="productDetail">
+  <h3>
+    Product Name
+  </h3>
+    <p>
+      {{product.name}}
+      
+    </p>
+    <h3>
+      Seller
+    </h3>
+  <p>
+
+    {{product.advertiser.name}}
+  </p>
+  <h3>Product Description</h3>
+  <p>
+
+    {{product.description}}
+  </p>
+
+  <a href="https://{{product.url}}" target="_blank" (click)="productInterested(product)">BUY</a>
+  <button id="closeDetail" (click)="closeDetailComponent()">X</button>
+</div>
+  

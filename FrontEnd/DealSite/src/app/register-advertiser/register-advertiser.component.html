@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>
+    Welcome Advertiser!
+  </h2>
+  <form [formGroup]="advertiserRegistrationForm" (ngSubmit)="onRegistrationFormSubmit()">
+    <div class=form-group>
+      <label>Advertiser Name</label>
+      <input type="text" #refNameAn class="form-control" formControlName="advertiserName" (ng-change)="removeSuccessMsg()">
+      <div *ngIf="(advertiserRegistrationForm.controls['advertiserName'].errors)?.required && (advertiserRegistrationForm.controls['advertiserName'].dirty || advertiserRegistrationForm.controls['advertiserName'].touched)" class="alert">
+          Advertiser name required!
+      </div>
+    </div>
+    <br>
+    <div class=form-group>
+      <label>Publisher Id</label>
+      <input type="number" #refNamePId class="form-control" formControlName="publisherId">
+      
+    </div>
+    <button type="submit" [disabled]=(!advertiserRegistrationForm.valid) class="btn btn-primary">Submit</button>
+    
+  </form>
+  <br>
+  <div *ngIf="((registered$ | async) && advertiserRegistrationForm.pristine) " class="alert">
+    Successfuly Registered!
+  </div>
+</div>

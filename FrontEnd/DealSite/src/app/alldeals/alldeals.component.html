@@ -1,0 +1,31 @@
+<body>
+
+  <div *ngIf="products?.length!=0">
+
+    <table style="table-layout: auto ">
+      <tr>
+        <th>Product Name</th>
+        <th>Company</th>
+        <th>Price</th>
+        <th>Discount</th>
+        <th>Deal Start Date</th>
+        <th>Deal End Date</th>
+
+      </tr>
+      <tr *ngFor="let product of products">
+        <td>{{product.name | uppercase}}</td>
+        <td>{{product.advertiser.name | uppercase}}</td>
+        <td>{{product.price | currency: product.currency}}</td>
+        <td>{{product.discount}}%</td>
+        <td>{{product.startDate | date}}</td>
+        <td>{{product.endDate | date}}</td>
+        <button (click)="sendProductToDetailView(product)"> >View Deal</button>
+
+      </tr>
+
+    </table>
+
+  </div>
+
+</body>
+<app-product-detail class="container"></app-product-detail>

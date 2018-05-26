@@ -1,0 +1,16 @@
+productDetail{
+    float: right;
+    text-align: center;
+    
+    
+    
+}
+
+p{
+    color: brown;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    line-height: 1em;
+    text-align: inherit;
+    
+}

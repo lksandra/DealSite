@@ -1,0 +1,21 @@
+.container{
+    background-color: rgba(124, 231, 217, 0.555);
+    float: left;
+    
+}
+
+
+td{
+    text-align: left;
+    border: tomato;
+}
+
+th{
+    text-decoration-color: black;
+    white-space: nowrap;
+    text-align: left;
+}
+
+tr:hover {
+    background-color: yellowgreen;
+}
