@@ -1,0 +1,18 @@
+{
+  "name": "dealsite",
+  "version": "1.0.0",
+  "description": "DEALSITE",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lakshmi kanth sandra",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.16",
+    "morgan": "^1.9.0",
+    "node-xlsx": "^0.12.0"
+  }
+}
